@@ -1,0 +1,61 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color:rgba(65, 105, 225, 0.642);
+            text-align: center;
+        }
+        .text {
+            background: url(https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.jpg);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-position-y: center;
+            text-shadow: 2px 2px 8px blueviolet;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 4rem;
+            animation: text 4s ease-in-out alternate infinite;
+        }
+        .button {
+            font-size: 1.4rem;
+            text-decoration: none;
+            padding:16px;
+            background-color: rgba(255, 255, 255, 0.642);
+            border-radius: 40px;
+            color: blueviolet;
+            box-shadow: 0 2px 10px 4px rgba(138, 49, 49, 0.642);
+            transition: all 0.5s ease;
+        }
+        .button:hover {
+            box-shadow: 0 2px 10px 100vh rgba(0, 0, 0, 0.642);
+            padding: 30px;
+            color:rgb(215, 167, 104);
+            transition: all 1s ease;
+        }
+        @keyframes text {
+            0% {
+                background-position-y: 0;
+            }
+            100% {
+                background-position-y: 100%;
+            }
+
+        } 
+        @media (max-height: 600px) {
+            :root {
+                font-size: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>404</h1>
+            <p class="message">Ceci n'est pas une page.</p>
+        </div>
+        <a href="/" class="button">Go back home</a>
+    </div>
+</body>
+</html>
