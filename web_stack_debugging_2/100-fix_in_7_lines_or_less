@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script to run nginx using nginx user
-sudo sed -i "s/\([ :]\)80 /\18080 /" /etc/nginx/sites-enabled/default
-sudo pkill apache2
-sudo chown -R nginx:nginx /etc/nginx/
-sudo chmod u+rw /etc/nginx/nginx.conf
-sudo -u nginx service nginx restart
+sudo chmod -R 755 /etc/nginx/
+sudo pkill -9 apache2
+sudo sed -i 's/8080/8081/g' /etc/apache2/ports.conf
+su nginx -c "sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default"
+su nginx service nginx restart
